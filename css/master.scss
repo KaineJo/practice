@@ -1,0 +1,94 @@
+@import "variables";
+.nav {
+  background-color: $orange;
+  transition: background-color .5s;
+  .nav-items {
+    background-color: $darkgray;
+    .close {
+        color: $orange;
+      }
+    .item {
+      &.active {
+        a {
+          color: $orange;
+          font-family: $pfont;
+        }
+      }
+      a {
+        color: white;
+        font-family: $pfont;
+      }
+    }
+
+  }
+  .burger {
+    background-color: $orange;
+    border: 1px solid $darkgray;
+    i {
+      color: $darkgray;
+    }
+  }
+}
+
+
+.header {
+  padding: 5px;
+  text-align: center;
+  background: transparent;
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.srt {
+  text-align: center;
+  padding-top: 200px;
+  font-size: 100px;
+  font-family: 'Lobster', cursive;
+}
+
+.tagline {
+  text-align: center;
+  padding-top: 20px;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.tt {
+  font-size: 100px;
+  padding-top: 100px;
+}
+
+@media only screen and (min-width: 436px) {
+
+}
+
+@media only screen and (min-width: 620px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+  .nav {
+    background-color: transparent;
+    .nav-items {
+      background-color: transparent;
+      .item {
+        &.active {
+          a {
+            color: red;
+          }
+        }
+        a {
+          color: white;
+        }
+      }
+
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
