@@ -1,27 +1,35 @@
+let scroll;
 function changeTheme() { //Changes color of navbar on scroll down
+  console.log( $('.nav').height());
+  console.log(scroll);
   if(screenWidth > large) {
     if(scroll >= $('.nav').height()) {
-      $('.nav').css('backgroundColor', '#0e1221');
-      $('.nav-items').css('backgroundColor', 'transparent');
+      $('.nav').css('backgroundColor', '#ffcb82');
+      $('.nav-items').css('backgroundColor', '#ffcb82');
     } else {
-      $('.nav').css('backgroundColor', 'rgba(14,18,33,0.56)');
+      $('.nav').css('backgroundColor', 'transparent');
       $('.nav-items').css('backgroundColor', 'transparent');
     }
   } else if(screenWidth > medium && screenWidth < large) {
     if(scroll >= ($('.nav').height() + $('.nav-items').height())) {
-      $('.nav').css('backgroundColor', '#0e1221');
-      $('.nav-items').css('backgroundColor', '#0e1221');
+      $('.nav').css('backgroundColor', '#ffcb82');
+      $('.nav-items').css('backgroundColor', '#ffcb82');
     } else {
-      $('.nav').css('backgroundColor', 'rgba(14,18,33,0.56)');
-      $('.nav-items').css('backgroundColor', 'rgba(14,18,33,0.56)');
+      $('.nav').css('backgroundColor', 'transparent');
+      $('.nav-items').css('backgroundColor', 'transparent');
     }
   } else {
-    $('.nav').css('backgroundColor', '#0e1221');
-    $('.nav-items').css('backgroundColor', '#0e1221');
+    $('.nav').css('backgroundColor', '#ffcb82');
+    $('.nav-items').css('backgroundColor', '#4d4d4d');
   }
 };
 
-$(document).scroll(function() {
+$(window).scroll(function() {
+  scroll = $(window).scrollTop();
+  changeTheme();
+});
+
+$(window).resize(function() {
   changeTheme();
 });
 

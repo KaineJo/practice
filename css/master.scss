@@ -4,6 +4,7 @@
   transition: background-color .5s;
   .nav-items {
     background-color: $darkgray;
+    transition: background-color .5s;
     .close {
         color: $orange;
       }
@@ -54,6 +55,10 @@
 
 * {
   font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-size: 30px;
 }
 
 .tt {
