@@ -4,7 +4,7 @@
   transition: background-color .5s;
   .nav-items {
     background-color: $darkgray;
-    transition: background-color .5s;
+    transition: background-color .5s, right .5s;
     .close {
         color: $orange;
       }
