@@ -1,33 +1,42 @@
 @import "variables";
+@import "landing";
 .nav {
-  background-color: $orange;
+  background-color: $brown;
   transition: background-color .5s;
   .nav-items {
     background-color: $darkgray;
     transition: background-color .5s, right .5s;
     .close {
-        color: $orange;
-      }
+      color: $brown;
+    }
     .item {
       &.active {
         a {
-          color: $orange;
+          color: $gray;
           font-family: $pfont;
+          font-weight: bold;
         }
       }
       a {
         color: white;
         font-family: $pfont;
+        font-weight: bold;
       }
     }
 
   }
   .burger {
-    background-color: $orange;
+    background-color: $brown;
     border: 1px solid $darkgray;
     i {
       color: $darkgray;
     }
+  }
+}
+
+.container {
+  p {
+    font-size: 20px;
   }
 }
 
@@ -82,7 +91,7 @@ p {
       .item {
         &.active {
           a {
-            color: red;
+            color: $gray;
           }
         }
         a {
